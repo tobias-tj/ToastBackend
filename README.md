@@ -38,7 +38,7 @@ Adjuntar cualquier documentación al proyecto en forma de archivos con extensió
 Se recomienda ir haciendo commits a medida que se avanza con la solución. Agrupando estos commits si corresponde hacerlo.
 
 
-### Contruyendo el proyecto
+### Construyendo el proyecto
 
 El proyecto incluye un pom.xml que permite construir un paquete jar utilizando [Maven](http://maven.apache.org). Simplemente corriendo `mvn package` descargará todas las dependencias necesarias y construirá un paquete jar estándar.
 
