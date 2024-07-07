@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "eda1e9d3-9a0e-45dc-8182-781b939c3cf8",
+		"name": "TaskAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34425636"
+	},
+	"item": [
+		{
+			"name": "GetAllUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Jose Miguel\",\n    \"email\" : \"josem1@gmail.com\",\n    \"title\" : \"Developer\",\n    \"phone\" : \"0972335662\",\n    \"address\": \"Disney\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "dfee672b-8437-4f7a-8f91-3796b56b3a23",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchUserEmail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "emailjhon@gmail.com.py",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/dfee672b-8437-4f7a-8f91-3796b56b3a23/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"dfee672b-8437-4f7a-8f91-3796b56b3a23",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskTitle\" : \"Salida Amigos\",\n    \"taskDescription\" : \"Farra en la casa de Gustavo\",\n    \"taskPriority\" : \"Alta\",\n    \"initialDateTask\" : \"2024-08-09T00:00:00.000Z\",\n    \"completedDateTask\" : \"2024-09-10T00:00:00.000Z\",\n    \"user\": {\n        \"id\": \"3a68e6c5-5e23-4991-b940-b19f6e858369\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTask",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"3a68e6c5-5e23-4991-b940-b19f6e858369\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/11208eb3-2b1b-4eca-8c3c-f7e277e5daeb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"11208eb3-2b1b-4eca-8c3c-f7e277e5daeb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "da4ad0c7-33b9-4d33-b0d0-a9bc83170038",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/da4ad0c7-33b9-4d33-b0d0-a9bc83170038",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"da4ad0c7-33b9-4d33-b0d0-a9bc83170038"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "da4ad0c7-33b9-4d33-b0d0-a9bc83170038",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTaskById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "11208eb3-2b1b-4eca-8c3c-f7e277e5daeb",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/11208eb3-2b1b-4eca-8c3c-f7e277e5daeb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"11208eb3-2b1b-4eca-8c3c-f7e277e5daeb"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11208eb3-2b1b-4eca-8c3c-f7e277e5daeb",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

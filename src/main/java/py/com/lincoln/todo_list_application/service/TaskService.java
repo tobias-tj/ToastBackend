@@ -39,6 +39,11 @@ public class TaskService {
         return taskRepository.findById(id).orElseThrow(() -> new RuntimeException("Task Not Found!"));
     }
 
+    public TaskResponseDto getTaskById(String id){
+        Task newTask = taskRepository.findById(id).orElseThrow(() -> new RuntimeException("Task Not Found!"));
+        return convertToTaskResponseDto(newTask);
+    }
+
     public Task createTask(Task task){
         return taskRepository.save(task);
     }

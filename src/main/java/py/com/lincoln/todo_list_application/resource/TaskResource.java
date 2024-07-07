@@ -29,6 +29,11 @@ public class TaskResource {
         return ResponseEntity.ok().body(taskService.getAllTask(page, size));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<TaskResponseDto> getTask(@PathVariable(value = "id") String id){
+        return ResponseEntity.ok().body(taskService.getTaskById(id));
+    }
+
 
     @PatchMapping("/{id}")
     public ResponseEntity<String> updateTask(@PathVariable(value = "id") String id, @RequestBody TaskUpdateDto taskUpdateDto) {
